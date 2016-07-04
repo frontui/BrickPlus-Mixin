@@ -6,15 +6,15 @@
 
 ## 使用
 
-在`frontman`实例项目中的`less`文件夹拷贝项目到目录下
+在 `frontman` 实例项目中的 `less` 文件夹拷贝项目到目录下
 
 ```
-    git clone https://github.com/frontui/BrickPlus-Mixin.git
+ git clone https://github.com/frontui/BrickPlus-Mixin.git
 ```
 
 ### 更新 Mixin 库
 
-进入 `less/BrickPlus-Mixin'目录，使用`git pull`命令进行更新
+进入 `less/BrickPlus-Mixin' 目录，使用 `git pull` 命令进行更新
 
 
 ```
@@ -25,13 +25,13 @@ git pull origin master
 
 ###  引用
 
-在主文件中引入`BrickPlus-Mixin.less`项目
+在主文件中引入 `BrickPlus-Mixin.less` 项目
 
 在`frontman`构建 task 中我们需要对 less 编译做过滤
 
 ```
   ...
-  return gulp.src([config.staticPath+'/less/**/**.less', '!BrickPlus-Mixin/**/**.less'])
+  return gulp.src([config.staticPath+'/less/**/**.less', '!'+config.staticPath+'/less/BrickPlus-Mixin/**/**.less'])
   ...
 ```
 
