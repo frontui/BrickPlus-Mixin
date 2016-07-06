@@ -26,90 +26,69 @@
 */
 // transition
 .transition ( @property, @duration, @timing-function, @delay ) {
-    /*-webkit-transition-property: @property;
-       -moz-transition-property: @property;
-         -o-transition-property: @property;*/
+    //-webkit-transition-property: @property;
             transition-property: @property;
-    /*-webkit-transition-duration: @duration;
-       -moz-transition-duration: @duration;
-         -o-transition-duration: @duration;*/
+    //-webkit-transition-duration: @duration;
             transition-duration: @duration;
-    /*-webkit-transition-timing-function: @timing-function;
-       -moz-transition-timing-function: @timing-function;
-         -o-transition-timing-function: @timing-function;*/
+    //-webkit-transition-timing-function: @timing-function;
             transition-timing-function: @timing-function;
-    /*-webkit-transition-delay: @delay;
-       -moz-transition-delay: @delay;
-         -o-transition-delay: @delay;*/
+    //-webkit-transition-delay: @delay;
             transition-delay: @delay;
 }
 
 // Rounded
 .rounded ( @radius ) {
-    /*-webkit-border-radius: @radius;
-       -moz-border-radius: @radius;*/
+    //-webkit-border-radius: @radius;
             border-radius: @radius;
 }
 
 // Borner radius
 .border-radius ( @topLeft, @topRight, @bottomRight, @bottomLeft ) {
     // Top Left
-    /*-webkit-border-top-left-radius: @topLeft;
-        -moz-border-radius-topleft: @topLeft;*/
+    //-webkit-border-top-left-radius: @topLeft;
             border-top-left-radius: @topLeft;
     // Top Right
-    /*-webkit-border-top-right-radius: @topRight;
-        -moz-border-radius-topright: @topRight;*/
+    //-webkit-border-top-right-radius: @topRight;
             border-top-right-radius: @topRight;
     // Bottom Right
-    /*-webkit-border-bottom-right-radius: @bottomRight;
-        -moz-border-radius-bottomright: @bottomRight;*/
+    //-webkit-border-bottom-right-radius: @bottomRight;
             border-bottom-right-radius: @bottomRight;
     // Bottom Left
-    /*-webkit-border-bottom-left-radius: @bottomLeft;
-        -moz-border-radius-bottomleft: @bottomLeft;*/
+    //-webkit-border-bottom-left-radius: @bottomLeft;
             border-bottom-left-radius: @bottomLeft;
 }
 
 // Basic box shadow
 .box-shadow( @shadow ) {
-    /*-webkit-box-shadow: @shadow;
-       -moz-box-shadow: @shadow;*/
+    //-webkit-box-shadow: @shadow;
             box-shadow: @shadow;
 }
 
 // Outer shadow
 .outer-shadow( @x: 0, @y: 1px, @blur: 2px, @alpha: 0.1 ) {
-    /*-webkit-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
-       -moz-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);*/
+    //-webkit-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
             box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
 }
 
 .outer-shadow-custom( @x: 0, @y: 1px, @blur: 2px, @spread: 0, @rgba:rgba(0,0,0,0.1) ) {
-  /*-webkit-box-shadow: @x @y @blur @spread rgba(@rgbR, @rgbG, @rgbB, @alpha);
-     -moz-box-shadow: @x @y @blur @spread rgba(@rgbR, @rgbG, @rgbB, @alpha);*/
+  //-webkit-box-shadow: @x @y @blur @spread rgba(@rgbR, @rgbG, @rgbB, @alpha);
         box-shadow: @x @y @blur @spread @rgba;
 }
 
 // Inner shadow
 .inner-shadow( @x: 0, @y: 1px, @blur: 2px, @alpha: 0.4 ) {
-    /*-webkit-box-shadow: inset @x @y @blur rgba(0, 0, 0, @alpha);
-       -moz-box-shadow: inset @x @y @blur rgba(0, 0, 0, @alpha);*/
+    //-webkit-box-shadow: inset @x @y @blur rgba(0, 0, 0, @alpha);
             box-shadow: inset @x @y @blur rgba(0, 0, 0, @alpha);
 }
 
 .inner-shadow-custom( @x: 0, @y: 1px, @blur: 2px, @spread: 0, @rgba:rgba(0,0,0,0.4) ) {
-  /*-webkit-box-shadow: inset @x @y @blur @spread rgba(@rgbR, @rgbG, @rgbB, @alpha);
-     -moz-box-shadow: inset @x @y @blur @spread rgba(@rgbR, @rgbG, @rgbB, @alpha);*/
-  box-shadow: inset @x @y @blur @spread @rgba;
+  //-webkit-box-shadow: inset @x @y @blur @spread rgba(@rgbR, @rgbG, @rgbB, @alpha);
+            box-shadow: inset @x @y @blur @spread @rgba;
 }
 
 // Basic transform
 .transform( @transform ) {
-    /*-webkit-transform: @transform;
-       -moz-transform: @transform;
-        -ms-transform: @transform;
-         -o-transform: @transform;*/
+    //-webkit-transform: @transform;
             transform: @transform;
 }
 
@@ -130,25 +109,19 @@
 
 // Background clip
 .background-clip( @argument: padding-box ) {
-  /*-webkit-background-clip: @argument;
-     -moz-background-clip: @argument;*/
+  //-webkit-background-clip: @argument;
           background-clip: @argument;
 }
 
 // Box sizing
 .border-box( @sizing: border-box ) {
-  /*-webkit-box-sizing: @sizing;
-     -moz-box-sizing: @sizing;
-      -ms-box-sizing: @sizing;*/
+  //-webkit-box-sizing: @sizing;
           box-sizing: @sizing;
 }
 
 // User select
 .user-select( @select: none ) {
-  /*-webkit-user-select: @select;
-     -moz-user-select: @select;
-      -ms-user-select: @select;
-       -o-user-select: @select;*/
+  //-webkit-user-select: @select;
           user-select: @select;
 }
 
@@ -239,14 +212,12 @@
 .text-hide() {
   overflow: hidden;
   //-webkit--o-text-overflow: ellipsis;
-  //-ms-text-overflow: ellipsis;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 //强制换行
 .word-wrap() {
-    /*-ms-word-break: break-all;*/
     word-break: break-all;
     white-space: normal;
 }
@@ -390,14 +361,14 @@
     animation-play-state: @play-state;
     animation-fill-mode: @fill-mode;
     // Safari 和 Chrome
-    /*-webkit-animation-name: @name;
-    -webkit-animation-duration: @duration;
-    -webkit-animation-timing-function: @timing-function;
-    -webkit-animation-delay: @delay;
-    -webkit-animation-iteration-count: @iteration-count;
-    -webkit-animation-direction: @direction;
-    -webkit-animation-play-state: @play-state;
-    -webkit-animation-fill-mode: @fill-mode;*/
+    //-webkit-animation-name: @name;
+    //-webkit-animation-duration: @duration;
+    //-webkit-animation-timing-function: @timing-function;
+    //-webkit-animation-delay: @delay;
+    //-webkit-animation-iteration-count: @iteration-count;
+    //-webkit-animation-direction: @direction;
+    //-webkit-animation-play-state: @play-state;
+    //-webkit-animation-fill-mode: @fill-mode;
 }
 
 // 动画定义简化
@@ -464,9 +435,4 @@
         opacity: 1;
     }
 }
-
-.float-item( @position,@display ) {
-   float: @position;
-   display: @display;
- }
  

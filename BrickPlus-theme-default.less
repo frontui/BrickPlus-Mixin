@@ -466,7 +466,35 @@
   @borderColor-default-toolTips: #f5dfb1;
 
 
-//分页尺寸
+//分页
+//尺寸
+@size-default-pagination: @height-default-btn;
+@size-large-pagination: @height-large-btn;
+@size-small-pagination: @height-small-btn;
+@size-smaller-pagination: @height-smaller-btn;
+@fontSize-default-pagination: @fontSize-smaller;
+@fontSize-large-pagination: @fontSize-large;
+@fontSize-small-pagination: @fontSize-smaller;
+@fontSize-smaller-pagination: @fontSize-smallest;
+@iconFontSize-default-pagination: floor(@fontSize-default-pagination*1.289);
+@iconFontSize-large-pagination: floor(@fontSize-large-pagination*1.6);
+@iconFontSize-small-pagination: floor(@fontSize-small-pagination*1.289);
+@iconFontSize-smaller-pagination: floor(@fontSize-smaller-pagination*1.289);
+@borderWidth-default-pagination: 1px;
+@borderRadius-default-pagination: @borderRadius-btn;
+//色调
+@primaryColor-default-pagination: @bgColor-primary-btn;
+@fontColor-default-pagination: @fontColor-default;
+@fontColorHover-default-pagination: @primaryColor-default-pagination;
+@fontColorActive-default-pagination: lighten(@primaryColor-default-pagination,100%);
+@fontColorDisabled-default-pagination: lighten(@fontColor-viceText, 20%);
+@borderColor-default-pagination: @borderColor-default;
+@borderColorHover-default-pagination: @primaryColor-default-pagination;
+@borderColorActive-default-pagination: darken(@primaryColor-default-pagination,15%);
+@bgColor-default-pagination: #fff;
+@bgColorHover-default-pagination: lighten(@primaryColor-default-pagination,42%);
+@bgColorActive-default-pagination: @primaryColor-default-pagination;
+@bgColorDisabled-default-pagination: @bgColor-disabled-btn;
 
 
 //回顶部组件
