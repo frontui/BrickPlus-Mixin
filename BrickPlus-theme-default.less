@@ -20,6 +20,8 @@
 //基础字符行高
 @line-height-base: 1.428;
 
+//公共圆角尺寸
+@borderRadius-public: 3px;
 
 //基础字体尺寸
 @fontSize-base: 14px;
@@ -153,7 +155,7 @@
   //尺寸
   @width-BricksAside: 260px;
   @borderWidth-BricksAside: 1px;
-  @borderRadius-btn-BricksAside: 3px;
+  @borderRadius-btn-BricksAside: @borderRadius-public;
   @paddingTB-btn-BricksAside: 8px;
   @paddingLR-btn-BricksAside: 15px;
   @size-btn-b-BricksAside: 28px;
@@ -210,7 +212,7 @@
   @height-smaller-btn: 22px;
   @padding-dropDownMenu-btn: 8px;
   @paddingSize-btngb-inForm: 5px;
-  @borderRadius-btn: 3px;
+  @borderRadius-btn: @borderRadius-public;
   //@padding-large-dropDownMenu-btn: 12px 8px;
   //@padding-small-dropDownMenu-btn: 4px 8px;
   //@padding-smaller-dropDownMenu-btn: 0 8px;
@@ -365,7 +367,7 @@
   //尺寸
   @borderWidth-default-alert: 1px;
   @paddingAround-default-alert: 15px;
-  @borderRadius-default-alert: 3px;
+  @borderRadius-default-alert: @borderRadius-public;
   //色调
   @borderColor-default-alert: @borderColor-default;
   @borderColor-warning-alert: darken(@bgColor-warning,5%);
@@ -459,7 +461,7 @@
   //尺寸
   @width-default-toolTips: 240px;
   @arrowSize-default-toolTips: 6px;
-  @borderRadius-default-toolTips: 3px;
+  @borderRadius-default-toolTips: @borderRadius-public;
   //色调
   @fontColor-default-toolTips: darken(@borderColor-default-toolTips,45%);
   @bgColor-default-toolTips: #fffbec;
@@ -504,7 +506,7 @@
 //回顶部组件
 @size-actgotop: 40px;
 @lineHeight-actgotop: @size-actgotop * 1.4;
-@borderRadius-actgotop: 3px;
+@borderRadius-actgotop: @borderRadius-public;
 @bgColor-actgotop: rgba(38, 47, 59, 0.55);
 @bgColor-hover-actgotop: rgba(38, 47, 59, 0.85);
 
