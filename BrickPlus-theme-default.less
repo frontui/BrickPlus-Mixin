@@ -162,12 +162,15 @@
   //字体图标
   @content-btn-i-BricksAside: '\e601';
   //bricks侧导航颜色
-  @bgColor-BricksAside: @bgColor-primary;
-  @fontColor-link-BricksAside: @domColor6;
-  @fontColor-linkHover-BricksAside: @fontColor-link;
+  //@bgColor-BricksAside: @bgColor-primary;
+  @bgColor-BricksAside: @domColor6;
+  @fontColor-link-BricksAside: lighten(@domColor6,40%);
+  @fontColor-linkHover-BricksAside: #fff;
   @currFontColor-btn-BricksAside: @domColor7;
-  @hoverBgColor-btn-BricksAside: darken(@domColor7, 2%);
-  @currBgColor-btn-BricksAside: linear-gradient(to right, @domColor3, @domColor1);
+  //@hoverBgColor-btn-BricksAside: darken(@domColor7, 2%);
+  @hoverBgColor-btn-BricksAside: transparent;
+  //@currBgColor-btn-BricksAside: linear-gradient(to right, @domColor3, @domColor1);
+  @currBgColor-btn-BricksAside: @domColor3;
   @HoverBorderColorTOP-btn-BricksAside: linear-gradient(to right, @domColor1, @domColor2);
   @HoverBorderColorRIGHT-btn-BricksAside: linear-gradient(to bottom, @domColor2, @domColor3);
   @HoverBorderColorBOTTOM-btn-BricksAside: linear-gradient(to left, @domColor3, @domColor4);
