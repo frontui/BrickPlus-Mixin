@@ -105,6 +105,8 @@
   @zIndex-btn-btnGroupBox: 2;
   //警告框
   @zIndex-alertFixedWrap: 2;
+  //页面中的加载动画
+  @zIndex-backGround-spinner: 10000;
 
 
 //bricks body 背景
@@ -585,8 +587,6 @@
 
 
 //页面中的加载动画
-  //Z 轴排序
-  @zIndex-backGround-spinner: 10000;
   //尺寸
   @sizePoint-page-pinner: 14px;
   //色调
@@ -594,6 +594,40 @@
   @pointColor1-page-spinner: @domColor1;
   @pointColor2-page-spinner: @domColor2;
   @pointColor3-page-spinner: @domColor3;
+
+
+//开关
+  //图标
+  @icon-off-switch: "\e070";
+  @icon-on-switch: '\e28a';
+  @icon-disabled-switch: '\e033';
+  //尺寸
+    //默认
+    @fontSize-switch: @fontSize-smallest;
+    @iconSize-disabled-switch: @fontSize-large;
+    @gapSize-default-switch: 2px; //gapsize 请保持偶数设置
+    @height-default-switch: @height-smaller-btn;
+    //size small
+    @iconSize-disabled-small-switch: @fontSize-smallest;
+    @gapSize-small-switch: 2px;
+    @height-small-switch: @height-default-switch - 8px;
+    //size large
+    @iconSize-disabled-large-switch: @fontSize-larger;
+    @gapSize-large-switch: 2px;
+    @height-large-switch: @height-small-btn;
+    //size xlarge
+    @iconSize-disabled-xlarge-switch: @fontSize-largest;
+    @fontSize-xlarge-switch: @fontSize-small;
+    @gapSize-xlarge-switch: 2px;
+    @height-xlarge-switch: @height-default-btn;
+  //色调
+  @bgColor-off-switch: darken(@bgColor-disabled-btn,5%);
+  @bgColor-on-switch: @domColor2;
+  @bgColor-disabled-switch: @bgColor-disabled-btn;
+  @bgColor-btn-switch: #fff;
+  @fontColor-off-switch: lighten(@fontColor-viceText,20%);
+  @fontColor-disabled-switch: @fontColor-off-switch;
+  @iconColor-disabled-switch: darken(@bgColor-disabled-switch,10%);
 
 
 //回顶部组件
