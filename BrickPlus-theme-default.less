@@ -44,7 +44,7 @@
   //链接文本色调
   @fontColor-link: @domColor1;
   //错误文本色调
-  @fontColor-error: darken(@domColor3, 25%);
+  @fontColor-danger: darken(@domColor3, 25%);
   //成功文本色调
   @fontColor-success: darken(@domColor2, 20%);
   //警告文本色调
@@ -246,6 +246,7 @@
   @fontColor-formControlModaOps: #fff;
   @fontColor-formControlModaOps-icon: lighten(@fontColor-link, 35%);
   @fontColor-formControlModaOps-iconHover: lighten(@fontColor-link, 100%);
+  @requiredIconColor-formControl: @bgColor-danger;
   //字体图标
   @content-icon-formControlDropdown: '\e600';
   @content-icon-formControlModal: '\e607';
@@ -271,6 +272,7 @@
   @pa-ma-width-grid-gutter-formControl: 5px;
   @paddingBottom-default-formTitle: 6px;
   @fontSize-sub-content-formTitle: 70%;
+  @requiredIconSize-formControl: 6px; //请保持偶数设置
     //表单尺寸（large）
     @width-label-large-formControl: @width-label-formControl;
     @height-large-formControl: 46px;
@@ -390,7 +392,7 @@
   @fontColor-warning-alert: @fontColor-warning;
   @fontColor-success-alert: @fontColor-success;
   @fontColor-info-alert: @fontColor-info;
-  @fontColor-danger-alert: @fontColor-error;
+  @fontColor-danger-alert: @@fontColor-danger;
   //图标
   @icon-close-alert: "\e070";
   @icon-warning-alert: "\e000";
@@ -415,7 +417,7 @@
   //色调
   @iconColor-success-resultNotice: @fontColor-success;
   @iconColor-wait-resultNotice: @fontColor-tips;
-  @iconColor-fail-resultNotice: @fontColor-error;
+  @iconColor-fail-resultNotice: @fontColor-danger;
   @iconColor-info-resultNotice: @fontColor-info;
   @topicColor-success-resultNotice: @iconColor-success-resultNotice;
   @topicColor-wait-resultNotice: @iconColor-wait-resultNotice;
