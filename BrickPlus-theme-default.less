@@ -107,6 +107,9 @@
   @zIndex-alertFixedWrap: 2;
   //页面中的加载动画
   @zIndex-backGround-spinner: 10000;
+  //系统导航
+  @zIndex-systemTopNav: 2;
+  @zIndex-systemAside: 2;
 
 
 //bricks body 背景
@@ -183,6 +186,12 @@
   @paddingTB-screen1024-btn-BricksAside: 8px;
   @paddingLR-screen1024-btn-BricksAside: 15px;
   @size-screen1024-btn-b-BricksAside: 22px;
+
+
+//系统 body 风格
+  //色调
+  @bgStyle-body-system: url("@{images-url}systemBgImg/systemBgImg_1.jpg") transparent center center no-repeat;
+
 
 
 //选项卡（标签页）
@@ -629,6 +638,14 @@
   @fontColor-off-switch: lighten(@fontColor-viceText,20%);
   @fontColor-disabled-switch: @fontColor-off-switch;
   @iconColor-disabled-switch: darken(@bgColor-disabled-switch,10%);
+
+
+//系统导航
+  //色调
+  @bgColor-systemTopNav: @domColor1;
+  //尺寸
+    //顶部导航
+    @height-systemTopNav: 50px;
 
 
 //回顶部组件
