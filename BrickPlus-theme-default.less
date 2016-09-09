@@ -108,8 +108,9 @@
   //页面中的加载动画
   @zIndex-backGround-spinner: 10000;
   //系统导航
-  @zIndex-systemTopNav: 2;
-  @zIndex-systemAside: 2;
+  @zIndex-systemTopNav: 1;
+  @zIndex-systemAside: 0;
+  @zIndex-systemContainer: @zIndex-systemAside;
 
 
 //bricks body 背景
@@ -642,10 +643,19 @@
 
 //系统导航
   //色调
-  @bgColor-systemTopNav: @domColor1;
+  @bgColor-dropdown-systemTopNav: rgba(138, 149, 172, 1);
+  @bgColor-hover-btns-systemTopNav: rgba(255,255,255,0.075);
+  @fontColor-systemTopNav: #fff;
+  @bgColor-dropdown-pl-systemTopNav: rgba(255, 255, 255, 1);
+  @bgStyle-dropdown-pl-systemTopNav: url("@{images-url}systemTopNavPlDorpDownBgImg.jpg") transparent -1px top;
   //尺寸
     //顶部导航
+    @width-dropdown-pl-item-systemTopNav: 144px;
+    @gapSize-dropdown-pl-item-systemTopNav: 20px;
     @height-systemTopNav: 50px;
+    @arrowSize-dropdown-systemTopNav: 10px;
+    //侧导航
+    @width-systemAside: 180px;
 
 
 //回顶部组件
