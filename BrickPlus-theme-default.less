@@ -643,11 +643,22 @@
 
 //系统导航
   //色调
-  @bgColor-dropdown-systemTopNav: rgba(138, 149, 172, 1);
-  @bgColor-hover-btns-systemTopNav: rgba(255,255,255,0.075);
-  @fontColor-systemTopNav: #fff;
-  @bgColor-dropdown-pl-systemTopNav: rgba(255, 255, 255, 1);
-  @bgStyle-dropdown-pl-systemTopNav: url("@{images-url}systemTopNavPlDorpDownBgImg.jpg") transparent -1px top;
+    //顶部导航
+    @bgColor-dropdown-systemTopNav: rgba(138, 149, 172, 1);
+    @bgColor-hover-btns-systemTopNav: rgba(255,255,255,0.075);
+    @fontColor-btns-systemTopNav: darken(@fontColor-hover-btns-systemTopNav,25%);
+    @fontColor-hover-btns-systemTopNav: rgba(255, 255, 255, 1);
+    @bgColor-dropdown-pl-systemTopNav: rgba(255, 255, 255, 1);
+    @bgStyle-dropdown-pl-systemTopNav: url("@{images-url}systemTopNavPlDorpDownBgImg.jpg") transparent -1px top;
+    //侧导航
+    @fontColor-btns-systemAside: @fontColor-btns-systemTopNav;
+    @fontColor-hover-btns-systemAside: @fontColor-hover-btns-systemTopNav;
+    @bgColor-btns-systemAside: rgba(38,47,59,0.35);
+    @bgColor-hover-btns-systemAside: rgba(38,47,59,0.55);
+    @bgColor-lv2-btns-systemAside: @bgColor-hover-btns-systemTopNav;
+    @bgColor-hover-lv2-btns-systemAside: rgba(255,255,255,0.2);
+    @borderColor-hover-lv1-btns-system: darken(@bgColor-btns-systemAside,2%);
+    @borderColor-hover-lv2-btns-system: lighten(@bgColor-btns-systemAside,50%);
   //尺寸
     //顶部导航
     @width-dropdown-pl-item-systemTopNav: 144px;
@@ -656,6 +667,19 @@
     @arrowSize-dropdown-systemTopNav: 10px;
     //侧导航
     @width-systemAside: 180px;
+    @width-fold-systemAside: 70px;
+    @switchSize-systemAside: 38px;
+    @gapSize-systemAside: 10px;
+    @paddingSize-btns-systemAside: 14px;
+    @borderSize-btns-systemAside: 1px;
+    @height-btns-systemAside: 48px;
+    //@arrowSize-simTooltips-systemAside: 6px;
+  //图标
+  @icon-system-setting-systemAside: '\e031'; //系统设置图标
+  @icon-operative-manage-systemAside: '\e031'; //运营管理图标
+  @icon-account-manage-systemAside: '\e031'; //用户管理图标
+  @icon-risk-manage-systemAside: '\e031'; //风控管理图标
+  @icon-system-manage-systemAside: '\e031'; //系统管理图标
 
 
 //回顶部组件
