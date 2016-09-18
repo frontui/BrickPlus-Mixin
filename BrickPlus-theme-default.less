@@ -657,8 +657,12 @@
     @bgColor-hover-btns-systemAside: rgba(38,47,59,0.55);
     @bgColor-lv2-btns-systemAside: @bgColor-hover-btns-systemTopNav;
     @bgColor-hover-lv2-btns-systemAside: rgba(255,255,255,0.2);
-    @borderColor-hover-lv1-btns-system: darken(@bgColor-btns-systemAside,2%);
-    @borderColor-hover-lv2-btns-system: lighten(@bgColor-btns-systemAside,50%);
+    @borderColor-hover-lv1-btns-systemAside: darken(@bgColor-btns-systemAside,2%);
+    @borderColor-hover-lv2-btns-systemAside: lighten(@bgColor-btns-systemAside,50%);
+    @borderColor-lv3-btns-systemAside: @bgColor-lv2-btns-systemAside;
+    //侧导航开关
+    @switchIconColor-systemAside: darken(@fontColor-btns-systemTopNav,10%);
+    @switchIconColor-hover-systemAside: @fontColor-hover-btns-systemTopNav;
   //尺寸
     //顶部导航
     @width-dropdown-pl-item-systemTopNav: 144px;
@@ -668,7 +672,7 @@
     //侧导航
     @width-systemAside: 180px;
     @width-fold-systemAside: 70px;
-    @switchSize-systemAside: 38px;
+    @switchSize-systemAside: 35px;
     @gapSize-systemAside: 10px;
     @paddingSize-btns-systemAside: 14px;
     @borderSize-btns-systemAside: 1px;
