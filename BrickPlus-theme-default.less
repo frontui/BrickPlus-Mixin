@@ -110,7 +110,10 @@
   //系统导航
   @zIndex-systemTopNav: 1;
   @zIndex-systemAside: 0;
+  @zIndex-systemAssistNav: @zIndex-systemAside;
   @zIndex-systemContainer: @zIndex-systemAside;
+  //系统内容框架
+  @zIndex-systemContent: @zIndex-systemAside + 1;
 
 
 //bricks body 背景
@@ -663,13 +666,20 @@
     //侧导航开关
     @switchIconColor-systemAside: darken(@fontColor-btns-systemTopNav,10%);
     @switchIconColor-hover-systemAside: @fontColor-hover-btns-systemTopNav;
+    //辅助导航
+    @fontColor-btns-systemAssistNav: @fontColor-btns-systemTopNav;
+    @fontColor-hover-btns-systemAssistNav: @fontColor-hover-btns-systemTopNav;
+    @bgColor-btns-systemAssistNav: @bgColor-btns-systemAside;
+    @bgColor-hover-btns-systemAssistNav: @bgColor-hover-btns-systemAside;
+    @gapSize-systemAssistNav: 10px;
+    @iconColor-head-systemAssistNav: @fontColor-hover-btns-systemAssistNav;
   //尺寸
     //顶部导航
     @width-dropdown-pl-item-systemTopNav: 144px;
     @gapSize-dropdown-pl-item-systemTopNav: 20px;
     @height-systemTopNav: 50px;
     @arrowSize-dropdown-systemTopNav: 10px;
-    //侧导航
+    //左侧导航
     @width-systemAside: 180px;
     @width-fold-systemAside: 70px;
     @switchSize-systemAside: 35px;
@@ -678,12 +688,16 @@
     @borderSize-btns-systemAside: 1px;
     @height-btns-systemAside: 48px;
     //@arrowSize-simTooltips-systemAside: 6px;
+    //辅助导航
+    @width-systemAssistNav: @width-systemAside;
+    @iconSize-head-systemAssistNav: 18px;
   //图标
   @icon-system-setting-systemAside: '\e031'; //系统设置图标
   @icon-operative-manage-systemAside: '\e031'; //运营管理图标
   @icon-account-manage-systemAside: '\e031'; //用户管理图标
   @icon-risk-manage-systemAside: '\e031'; //风控管理图标
   @icon-system-manage-systemAside: '\e031'; //系统管理图标
+  @icon-btns-systemAssistNav: '\e602'; //系统辅助导航按钮图标
 
 
 //回顶部组件
