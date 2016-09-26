@@ -110,7 +110,7 @@
   //系统导航
   @zIndex-systemTopNav: 1;
   @zIndex-systemAside: 0;
-  @zIndex-systemAssistNav: @zIndex-systemAside;
+  @zIndex-systemAssistNav: 0;
   @zIndex-systemContainer: @zIndex-systemAside;
   //系统内容框架
   @zIndex-systemContent: @zIndex-systemAside + 1;
@@ -194,7 +194,8 @@
 
 //系统 body 风格
   //色调
-  @bgStyle-body-system: url("@{images-url}systemBgImg/systemBgImg_1.jpg") transparent center center no-repeat;
+  @bgStyle-body-system: url("@{images-url}systemBgImg/systemBgImg_2.jpg") transparent center center no-repeat;
+  @bgColor-content-system: rgba(243,244,246,1);
 
 
 
@@ -207,7 +208,7 @@
     @gapSize-btn-Prototype: 5px;
     //色调
     @borderColor1-Prototype: @borderColor-default;
-    @bgColor1-tab-Prototype: #fff;
+    @bgColor1-tab-Prototype: @domColor7;
     //prototype响应式参数
     @padding-btn-screen1024-Prototype: 0 15px;
 
@@ -653,6 +654,9 @@
     @fontColor-hover-btns-systemTopNav: rgba(255, 255, 255, 1);
     @bgColor-dropdown-pl-systemTopNav: rgba(255, 255, 255, 1);
     @bgStyle-dropdown-pl-systemTopNav: url("@{images-url}systemTopNavPlDorpDownBgImg.jpg") transparent -1px top;
+    @bgColor-functionIcon-systemTopNav: #8596b4;
+    @bgColor-fr-systemTopNav: #3dc9ca;
+    @bgStyle-fr-themes-systemTopNav: url("@{images-url}stnFithemes.png") transparent center center no-repeat;
     //侧导航
     @fontColor-btns-systemAside: @fontColor-btns-systemTopNav;
     @fontColor-hover-btns-systemAside: @fontColor-hover-btns-systemTopNav;
@@ -664,7 +668,7 @@
     @borderColor-hover-lv2-btns-systemAside: lighten(@bgColor-btns-systemAside,50%);
     @borderColor-lv3-btns-systemAside: @bgColor-lv2-btns-systemAside;
     //侧导航开关
-    @switchIconColor-systemAside: darken(@fontColor-btns-systemTopNav,10%);
+    @switchIconColor-systemAside: @fontColor-hover-btns-systemTopNav;
     @switchIconColor-hover-systemAside: @fontColor-hover-btns-systemTopNav;
     //辅助导航
     @fontColor-btns-systemAssistNav: @fontColor-btns-systemTopNav;
@@ -679,15 +683,16 @@
     @gapSize-dropdown-pl-item-systemTopNav: 20px;
     @height-systemTopNav: 50px;
     @arrowSize-dropdown-systemTopNav: 10px;
+    @iconSize-systemTopNav: (@height-systemTopNav/2 + 2px);
     //左侧导航
     @width-systemAside: 180px;
     @width-fold-systemAside: 70px;
-    @switchSize-systemAside: 35px;
+    @switchSize-systemAside: 36px;
     @gapSize-systemAside: 10px;
     @paddingSize-btns-systemAside: 14px;
     @borderSize-btns-systemAside: 1px;
     @height-btns-systemAside: 48px;
-    //@arrowSize-simTooltips-systemAside: 6px;
+    @arrowSize-simTooltips-systemAside: 6px;
     //辅助导航
     @width-systemAssistNav: @width-systemAside;
     @iconSize-head-systemAssistNav: 18px;
