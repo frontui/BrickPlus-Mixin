@@ -44,22 +44,19 @@
   //链接文本色调
   @fontColor-link: @domColor1;
   //错误文本色调
+  @fontColor-error: darken(@domColor3, 25%);
+  //危险文本色调
   @fontColor-danger: darken(@domColor3, 25%);
-  //成功文本色调
-  @fontColor-success: darken(@domColor2, 20%);
   //警告文本色调
   @fontColor-warning: lighten(@domColor5, 10%);
+  //成功文本色调
+  @fontColor-success: darken(@domColor2, 20%);
+  //正确文本色调
+  @fontColor-correct: darken(@domColor2, 20%);
   //提示文本色调
   @fontColor-tips: @fontColor-viceText;
   //消息文本色调
   @fontColor-info: @domColor1;
-
-
-//基础边框色调
-@borderColor-base: darken(@domColor7, 11.5%);
-  //默认边框色调
-  @borderColor-default: @borderColor-base;
-  @borderColor-primary: darken(@domColor7, 8.2%);
 
 
 //基础背景色
@@ -68,16 +65,42 @@
   @bgColor-primary: @bgColor-base;
   //次要背景色
   @bgColor-secondary: darken(@domColor7, 3%);
-  //背景色-成功
-  @bgColor-success: lighten(@domColor2, 35%);
-  //背景色-信息
-  @bgColor-info: lighten(@domColor1, 41%);
-  //背景色-警示
-  @bgColor-warning: lighten(@domColor5, 47%);
+  //背景色-错误
+  @bgColor-error: lighten(@domColor3, 27%);
   //背景色-危险
   @bgColor-danger: lighten(@domColor3, 27%);
+  //背景色-警示
+  @bgColor-warning: lighten(@domColor5, 47%);
+  //背景色-成功
+  @bgColor-success: lighten(@domColor2, 35%);
+  //背景色-成功
+  @bgColor-correct: lighten(@domColor2, 35%);
   //背景色-辅助提示
   @bgColor-tips: @bgColor-secondary;
+  //背景色-信息
+  @bgColor-info: lighten(@domColor1, 41%);
+
+
+//基础边框色调
+@borderColor-base: darken(@domColor7, 11.5%);
+  //默认边框色调
+  @borderColor-default: @borderColor-base;
+  //主要边框色调
+  @borderColor-primary: darken(@domColor7, 8.2%);
+  //错误情景边框色调
+  @borderColor-error: darken(@bgColor-error,10%);
+  //危险情景边框色调
+  @borderColor-danger: darken(@bgColor-danger,10%);
+  //警告情景边框色调
+  @borderColor-warning: darken(@bgColor-warning,10%);
+  //成功情景边框色调
+  @borderColor-success: darken(@bgColor-success,10%);
+  //正确情景边框色调
+  @borderColor-correct: darken(@bgColor-correct,10%);
+  //提示情景边框色调
+  @borderColor-tips: darken(@bgColor-tips,10%);
+  //信息情景边框色调
+  @borderColor-info: darken(@bgColor-info,10%);
 
 
 //
@@ -237,80 +260,83 @@
   //@padding-smaller-dropDownMenu-btn: 0 8px;
 
 
-  //表单
-    //色调
-    @bgColor-default-form: @domColor7;
-    @bgColor-readonly-form: @bgColor-tips;
-    @bgColor-disabled-form: @bgColor-readonly-form;
-    @bgColor-tips-form: @bgColor-readonly-form;
-    @bgColor-addon-form: darken(@domColor7, 5%);
-    @bgColor-correct-formControl: lighten(@borderColor-correct-formControl, 36%);
-    @bgColor-error-formControl: lighten(@borderColor-error-formControl, 29%);
-    @bgColor-warning-formControl: lighten(@borderColor-warning-formControl, 12%);
-    @bgColor-formControlModaOps: @fontColor-link;
-    @bgColor-formControlModaOps-icon: lighten(@fontColor-link, 15%);
-    @borderColor-primary-formControl: darken(@domColor7, 25%); //lighten(@borderColor-default,20%);
-    @borderColor-focus-formControl: @domColor1;
-    @borderColor-correct-formControl: @domColor2;
-    @borderColor-error-formControl: @domColor3;
-    @borderColor-warning-formControl: lighten(@domColor5, 35%);
-    @fontColor-label-formControl: @fontColor-viceText;
-    @fontColor-value-formControl: @fontColor-default;
-    @fontColor-disabled-formControl: lighten(@fontColor-viceText, 20%);
-    @fontColor-formControlModaOps: #fff;
-    @fontColor-formControlModaOps-icon: lighten(@fontColor-link, 35%);
-    @fontColor-formControlModaOps-iconHover: lighten(@fontColor-link, 100%);
-    @requiredIconColor-formControl: @fontColor-warning;
-    //字体图标
-    @content-icon-formControlDropdown: '\e600';
-    @content-icon-formControlModal: '\e607';
-    @content-icon-formControlDate: '\e608';
-    @content-icon-formControlModaOps: '\e070';
-    @content-icon-hasCorrect: '\e281';
-    @content-icon-hasError: '\e205';
-    @content-icon-hasWarning: '\e000';
-    @content-icon-hasLoading: '\e028';
-    //默认尺寸
-    @width-label-formControl: 170px;
-    @width-label-grid-formControl: 94px;
-    @width-grpFix-formControl: 20px; //处理 .form-control-label 和 .form-control-wrap / modal / date / select 之间的间隔
-    @height-formControl: 38px;
-    @borderRadius-formControl: @borderRadius-btn;
-    @fontSize-formControl: @fontSize-smaller;
-    @lineHeight-formControl: @fontSize-formControl + 4px;
-    @borderWidth-formControl: 1px;
-    @paddingLR-default-fromControl: 15px;
-    @paddingTB-default-fromControl: ( @height-formControl - @lineHeight-formControl ) / 2 - @borderWidth-formControl;
-    @size-noticeArrow-formControl: 6px;
-    @marginR-default-formControlModaOps: 10px;
-    @marginR-default-formControlModaOps: 10px;
-    @pa-ma-width-grid-gutter-formControl: 5px;
-    @paddingBottom-default-formTitle: 6px;
-    @fontSize-sub-content-formTitle: 70%;
-    @requiredIconSize-formControl: 6px; //请保持偶数设置
-      //表单尺寸（large）
-      @width-label-large-formControl: @width-label-formControl;
-      @height-large-formControl: 46px;
-      @fontSize-large-formControl: @fontSize-small;
-      @lineHeight-large-formControl: @fontSize-large-formControl + 4px;
-      @paddingLR-large-fromControl: @paddingLR-default-fromControl;
-      @paddingTB-large-fromControl: ( @height-large-formControl - @lineHeight-large-formControl ) / 2 - @borderWidth-formControl;
-      //表单尺寸（small）
-      @width-label-small-formControl: @width-label-formControl;
-      @height-small-formControl: 30px;
-      @fontSize-small-formControl: @fontSize-smaller;
-      @lineHeight-small-formControl: @fontSize-small-formControl + 4px;
-      @paddingLR-small-fromControl: @paddingLR-default-fromControl - 6px;
-      @paddingTB-small-fromControl: ( @height-small-formControl - @lineHeight-small-formControl ) / 2 - @borderWidth-formControl;
-      @marginR-small-formControlModaOps: 6px;
-      //表单尺寸（smaller）
-      @width-label-smaller-formControl: @width-label-formControl;
-      @height-smaller-formControl: 22px;
-      @fontSize-smaller-formControl: @fontSize-smallest;
-      @lineHeight-smaller-formControl: @fontSize-smaller-formControl + 4px;
-      @paddingLR-smaller-fromControl: @paddingLR-default-fromControl - 8px;
-      @paddingTB-smaller-fromControl: ( @height-smaller-formControl - @lineHeight-smaller-formControl ) / 2 - @borderWidth-formControl;
-      @marginR-smaller-formControlModaOps: 4px;
+//表单
+  //色调
+  @borderColor-primary-formControl: darken(@domColor7, 25%); //lighten(@borderColor-default,20%);
+  @borderColor-focus-formControl: @domColor1;
+  @borderColor-correct-formControl: @borderColor-correct;
+  @borderColor-error-formControl: @borderColor-error;
+  @borderColor-warning-formControl: @borderColor-warning;
+  @borderColor-tips-formControl: @borderColor-tips;
+  @bgColor-default-form: @domColor7;
+  @bgColor-readonly-form: @bgColor-tips;
+  @bgColor-disabled-form: @bgColor-readonly-form;
+  @bgColor-tips-form: @bgColor-readonly-form;
+  @bgColor-addon-form: darken(@domColor7, 5%);
+  @bgColor-correct-formControl: @bgColor-correct;
+  @bgColor-error-formControl: @bgColor-error;
+  @bgColor-warning-formControl: @bgColor-warning;
+  @bgColor-tips-formControl: @bgColor-tips;
+  @bgColor-formControlModaOps: @fontColor-link;
+  @bgColor-formControlModaOps-icon: lighten(@fontColor-link, 15%);
+  @fontColor-label-formControl: @fontColor-viceText;
+  @fontColor-value-formControl: @fontColor-default;
+  @fontColor-disabled-formControl: lighten(@fontColor-viceText, 20%);
+  @fontColor-formControlModaOps: #fff;
+  @fontColor-formControlModaOps-icon: lighten(@fontColor-link, 35%);
+  @fontColor-formControlModaOps-iconHover: lighten(@fontColor-link, 100%);
+  @requiredIconColor-formControl: @fontColor-warning;
+  //字体图标
+  @content-icon-formControlDropdown: '\e600';
+  @content-icon-formControlModal: '\e607';
+  @content-icon-formControlDate: '\e608';
+  @content-icon-formControlModaOps: '\e070';
+  @content-icon-hasCorrect: '\e281';
+  @content-icon-hasError: '\e205';
+  @content-icon-hasWarning: '\e000';
+  @content-icon-hasTip: '\e605';
+  @content-icon-hasLoading: '\e028';
+  //默认尺寸
+  @width-label-formControl: 170px;
+  @width-label-grid-formControl: 94px;
+  @width-grpFix-formControl: 20px; //处理 .form-control-label 和 .form-control-wrap / modal / date / select 之间的间隔
+  @height-formControl: 38px;
+  @borderRadius-formControl: @borderRadius-btn;
+  @fontSize-formControl: @fontSize-smaller;
+  @lineHeight-formControl: @fontSize-formControl + 4px;
+  @borderWidth-formControl: 1px;
+  @paddingLR-default-fromControl: 15px;
+  @paddingTB-default-fromControl: ( @height-formControl - @lineHeight-formControl ) / 2 - @borderWidth-formControl;
+  @size-noticeArrow-formControl: 6px;
+  @marginR-default-formControlModaOps: 10px;
+  @marginR-default-formControlModaOps: 10px;
+  @pa-ma-width-grid-gutter-formControl: 5px;
+  @paddingBottom-default-formTitle: 6px;
+  @fontSize-sub-content-formTitle: 70%;
+  @requiredIconSize-formControl: 6px; //请保持偶数设置
+    //表单尺寸（large）
+    @width-label-large-formControl: @width-label-formControl;
+    @height-large-formControl: 46px;
+    @fontSize-large-formControl: @fontSize-small;
+    @lineHeight-large-formControl: @fontSize-large-formControl + 4px;
+    @paddingLR-large-fromControl: @paddingLR-default-fromControl;
+    @paddingTB-large-fromControl: ( @height-large-formControl - @lineHeight-large-formControl ) / 2 - @borderWidth-formControl;
+    //表单尺寸（small）
+    @width-label-small-formControl: @width-label-formControl;
+    @height-small-formControl: 30px;
+    @fontSize-small-formControl: @fontSize-smaller;
+    @lineHeight-small-formControl: @fontSize-small-formControl + 4px;
+    @paddingLR-small-fromControl: @paddingLR-default-fromControl - 6px;
+    @paddingTB-small-fromControl: ( @height-small-formControl - @lineHeight-small-formControl ) / 2 - @borderWidth-formControl;
+    @marginR-small-formControlModaOps: 6px;
+    //表单尺寸（smaller）
+    @width-label-smaller-formControl: @width-label-formControl;
+    @height-smaller-formControl: 22px;
+    @fontSize-smaller-formControl: @fontSize-smallest;
+    @lineHeight-smaller-formControl: @fontSize-smaller-formControl + 4px;
+    @paddingLR-smaller-fromControl: @paddingLR-default-fromControl - 8px;
+    @paddingTB-smaller-fromControl: ( @height-smaller-formControl - @lineHeight-smaller-formControl ) / 2 - @borderWidth-formControl;
+    @marginR-smaller-formControlModaOps: 4px;
 
 
 //模态窗口
@@ -393,10 +419,10 @@
   @borderRadius-default-alert: @borderRadius-public;
   //色调
   @borderColor-default-alert: @borderColor-default;
-  @borderColor-warning-alert: darken(@bgColor-warning,5%);
-  @borderColor-success-alert: darken(@bgColor-success,5%);
-  @borderColor-info-alert: darken(@bgColor-info,5%);
-  @borderColor-danger-alert: darken(@bgColor-danger,5%);
+  @borderColor-warning-alert: @borderColor-warning;
+  @borderColor-success-alert: @borderColor-success;
+  @borderColor-info-alert: @borderColor-info;
+  @borderColor-danger-alert: @borderColor-danger;
   @bgColor-default-alert: @bgColor-primary;
   @bgColor-warning-alert: @bgColor-warning;
   @bgColor-success-alert: @bgColor-success;
