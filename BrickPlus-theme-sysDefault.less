@@ -1,12 +1,8 @@
-/**
- * BrickPlus 系统默认主题
- */
+@charset 'UTF-8';
 
 //
 // -------- 全局样式参数 --------
 // -------- 全局参数命名规范：“属性名称 - 作用域”，如：@fontColor-default 尽量吧！！！语死早
-
-
 
 //色调
 @domColor1: #4492d4;
@@ -217,7 +213,7 @@
 
 //系统 body 风格
   //色调
-  @bgStyle-body-system: url("@{images-url}systemBgImg/systemBgImg_2.jpg") transparent center center no-repeat;
+  @bgStyle-body-system: url("@{images}systemBgImg/systemBgImg_2.jpg") transparent center center no-repeat;
   @bgColor-content-system: rgba(243,244,246,1);
 
 
@@ -244,7 +240,7 @@
   @bgColor-thirdly-btn: @domColor3;
   @bgColor-disabled-btn: #f5f5f5;
   //尺寸
-  @padding-large-btn: 10px 20px;
+  @padding-large-btn: 12px 20px;
   @height-large-btn: 46px;
   @padding-default-btn: 8px 16px;
   @height-default-btn: 38px;
@@ -682,10 +678,10 @@
     @fontColor-btns-systemTopNav: darken(@fontColor-hover-btns-systemTopNav,25%);
     @fontColor-hover-btns-systemTopNav: rgba(255, 255, 255, 1);
     @bgColor-dropdown-pl-systemTopNav: rgba(255, 255, 255, 1);
-    @bgStyle-dropdown-pl-systemTopNav: url("@{images-url}systemTopNavPlDorpDownBgImg.jpg") transparent -1px top;
+    @bgStyle-dropdown-pl-systemTopNav: url("@{images}systemTopNavPlDorpDownBgImg.jpg") transparent -1px top;
     @bgColor-functionIcon-systemTopNav: #8596b4;
-    @bgColor-fr-systemTopNav: #3dc9ca;
-    @bgStyle-fr-themes-systemTopNav: url("@{images-url}stnFithemes.png") transparent center center no-repeat;
+    @bgColor-fr-systemTopNav: #e27452;
+    @bgStyle-fr-themes-systemTopNav: url("@{images}stnFithemes.png") transparent center center no-repeat;
     //侧导航
     @fontColor-btns-systemAside: @fontColor-btns-systemTopNav;
     @fontColor-hover-btns-systemAside: @fontColor-hover-btns-systemTopNav;
